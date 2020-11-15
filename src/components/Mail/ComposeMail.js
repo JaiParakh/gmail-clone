@@ -6,7 +6,7 @@ export default class ComposeMail extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            sender: "jaiparakh.kota.10@gmail.com",
+            sender: "contact.jaiparakh@gmail.com",
             receiver: " ",
             subject: " ",
             body: ""
