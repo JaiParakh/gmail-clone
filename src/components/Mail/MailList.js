@@ -160,7 +160,7 @@ class MailList extends Component{
                     value={this.state.search}
                     icon="menu"
                     style={{margin: 15, marginTop: 35}}
-                    onIconPress={() => console.log("Yolo")}
+                    onIconPress={() => this.props.navigation.toggleDrawer()}
                 />
             </Portal>
                 <FlatList style={{paddingTop: 70}} data={mails} keyExtractor={item => item.id} renderItem={this.renderItems} />
