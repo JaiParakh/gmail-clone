@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Appbar } from 'react-native-paper';
+import { StyleSheet } from 'react-native';
 
 import MailList from './Mail/MailList';
 import ComposeMail from './Mail/ComposeMail';
@@ -9,16 +10,16 @@ import MailBody from './Mail/MailBody';
 const Stack = createStackNavigator();
 
 const MailBodyHeader = ({navigation}) => (
-    <Appbar.Header>
+    <Appbar.Header style={styles.appbar}>
     	<Appbar.BackAction onPress={navigation.goBack} />
       	<Appbar.Content title="" />
 		<Appbar.Action
 			icon="archive"
 			onPress={() => console.log('Pressed archive')}
 		/>
-		<Appbar.Action icon="mail" onPress={() => console.log('Pressed mail')} />
+		<Appbar.Action icon="email-outline" onPress={() => console.log('Pressed mail')} />
 		<Appbar.Action
-			icon="delete"
+			icon="delete-outline"
 			onPress={() => console.log('Pressed delete')}
 		/>
 		<Appbar.Action icon="dots-vertical" onPress={() => console.log('Pressed More')} />
@@ -26,7 +27,7 @@ const MailBodyHeader = ({navigation}) => (
 );
 
 const ComposeHeader = ({navigation}) => (
-	<Appbar.Header>
+	<Appbar.Header style={styles.appbar}>
 		<Appbar.BackAction onPress={navigation.goBack} />
 		<Appbar.Content title="Compose" />
 		<Appbar.Action icon="attachment" onPress={() => console.log('Pressed')} />
@@ -44,3 +45,7 @@ export default function AppNavigator() {
 		</Stack.Navigator>
 	);
 }
+
+const styles = StyleSheet.create({
+	appbar: {backgroundColor: '#fff', elevation: 0}
+});

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput as Input } from 'react-native';
+import { View, TextInput as Input, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 
 export default class ComposeMail extends React.Component {
@@ -16,24 +16,24 @@ export default class ComposeMail extends React.Component {
     render(){
         return(
             <View style={{backgroundColor: '#fff', height: '100%'}}>
-                <TextInput style={{fontSize: 16, backgroundColor: '#fff'}}
+                <TextInput style={styles.textInput}
                     value={this.state.sender}
                     onChangeText={(sender) => {this.setState({sender})}}
-                    left={<TextInput.Affix textStyle={{marginRight: 15}} text="From" />}
+                    left={<TextInput.Affix textStyle={styles.textInputAffix} text="From" />}
                     right={<TextInput.Icon name="chevron-down" />}
                 />
-                <TextInput style={{fontSize: 16, backgroundColor: '#fff'}}
+                <TextInput style={styles.textInput}
                     value={this.state.receiver}
                     onChangeText={(receiver) => {this.setState({receiver})}}
-                    left={<TextInput.Affix textStyle={{marginRight: 15}} text="To" />}
+                    left={<TextInput.Affix textStyle={styles.textInputAffix} text="To" />}
                     right={<TextInput.Icon name="chevron-down" />}
                 />
-                <TextInput style={{fontSize: 16, backgroundColor: '#fff'}}
+                <TextInput style={styles.textInput}
                     value={this.state.subject}
                     onChangeText={(subject) => {this.setState({subject})}}
-                    left={<TextInput.Affix textStyle={{marginRight: 15}} text="Subject" />}
+                    left={<TextInput.Affix textStyle={styles.textInputAffix} text="Subject" />}
                 />
-                <Input style={{fontSize: 18, paddingTop: 15, paddingLeft: 10}}
+                <Input style={styles.inputBody}
                     value={this.state.body}
                     placeholder="Compose email"
                     onChangeText={(body) => {this.setState({body})}}
@@ -43,3 +43,9 @@ export default class ComposeMail extends React.Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    textInput: {fontSize: 16, backgroundColor: '#fff'},
+    textInputAffix: {marginRight: 15},
+    inputBody: {fontSize: 18, paddingTop: 15, paddingLeft: 10}
+});
