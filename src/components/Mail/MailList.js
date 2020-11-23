@@ -7,7 +7,7 @@ import MailThumbnail from './MailThumbNail';
 let mails = [
     {
         id: "1",
-        subject: "Jai, these PHP, HTML and Javascript technologies have toppend the charts",
+        subject: "Jai, these PHP, HTML and Javascript technologies have topped the charts",
         sender: "Freelancer.com",
         body: "Freelacer Hi Jai, here are the latest \n\n\n\n\n\n\n\n\n\n\n\n\n\n Testing",
         avatar: "F",
@@ -37,7 +37,7 @@ let mails = [
     },
     {
         id: "4",
-        subject: "Jai, these PHP, HTML and Javascript technologies have toppend the charts",
+        subject: "Jai, these PHP, HTML and Javascript technologies have topped the charts",
         sender: "Freelancer.com",
         body: "Freelacer Hi Jai, here are the latest \n\n\n\n\n\n\n\n\n\n\n\n\n\n Testing",
         avatar: "F",
@@ -67,7 +67,7 @@ let mails = [
     },
     {
         id: "7",
-        subject: "Jai, these PHP, HTML and Javascript technologies have toppend the charts",
+        subject: "Jai, these PHP, HTML and Javascript technologies have topped the charts",
         sender: "Freelancer.com",
         body: "Freelacer Hi Jai, here are the latest \n\n\n\n\n\n\n\n\n\n\n\n\n\n Testing",
         avatar: "F",
